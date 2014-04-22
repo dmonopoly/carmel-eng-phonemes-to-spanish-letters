@@ -47,15 +47,15 @@ void WriteLine(ofstream &fout, const string &node1, const string &node2,
 }
 
 int main(int argc, char *argv[]) {
-  if (argc != 1) {
-    cerr << "Usage: ./<exec>" << endl;
+  if (argc != 2) {
+    cerr << "Usage: ./<exec> <cipher-file>" << endl;
     return 0;
   }
   vector<string> inputs;
   inputs.push_back("S");
   inputs.push_back("N");
   inputs.push_back("V");
-  string filename_for_cypher = "Ciphers/spanish.written.quoted.txt";
+  string filename_for_cypher = argv[1];
   // Get all English phonemes.
   set<string> eng_phonemes;
   {
