@@ -87,10 +87,11 @@ int main(int argc, char *argv[]) {
   fout << only_node << endl;
   // Remove the _ that was read in!
   letters.erase("_");
+  eng_phonemes.erase("_");
   WriteLine(fout, only_node, only_node, "_", "_");
   set<string>::iterator it;
   for (it = eng_phonemes.begin(); it != eng_phonemes.end(); ++it) {
-    string phon = eng_phonemes[i];
+    string phon = *it;
     set<string>::iterator it2;
     for (it2 = letters.begin(); it2 != letters.end(); ++it2) {
       string letter = *it2;
