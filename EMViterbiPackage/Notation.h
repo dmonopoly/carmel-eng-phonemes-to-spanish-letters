@@ -4,6 +4,7 @@
 #ifndef NOTATION_H_
 #define NOTATION_H_
 
+#include <initializer_list>
 #include <iostream>
 #include <vector>
 #include <sstream>

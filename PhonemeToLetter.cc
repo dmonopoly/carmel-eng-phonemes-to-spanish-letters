@@ -51,12 +51,14 @@ int main(int argc, char *argv[]) {
     cerr << "Usage: ./<exec> <cipher-file>" << endl;
     return 0;
   }
+  cout << "-PhonemeToLetter-" << endl;
   vector<string> inputs;
   inputs.push_back("S");
   inputs.push_back("N");
   inputs.push_back("V");
   string filename_for_cypher = argv[1];
   // Get all English phonemes.
+  cout << "Getting English phonemes..." << endl;
   set<string> eng_phonemes;
   {
     vector<string> observed_data;
@@ -69,6 +71,7 @@ int main(int argc, char *argv[]) {
     }
   }
   // Get all Spanish letters.
+  cout << "Getting Spanish letters..." << endl;
   set<string> letters;
   {
     vector<string> observed_data;
@@ -81,6 +84,7 @@ int main(int argc, char *argv[]) {
     }
   }
   // Begin writing the FST.
+  cout << "Starting to write Phoneme to Letter FST." << endl;
   ofstream fout;
   fout.open(FST_FILE.c_str());
   string only_node = "0";

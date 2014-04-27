@@ -56,15 +56,13 @@ int main(int argc, char *argv[]) {
     cerr << "Usage: ./<exec> <trigram-counts-file>" << endl;
     return 0;
   }
-  vector<string> inputs;
-  inputs.push_back("S");
-  inputs.push_back("N");
-  inputs.push_back("V");
+  cout << "-EnglishPhonemeTrigramModel-" << endl;
   string counts_file = argv[1];
 
   // Get LM data for WFSA.
   map<Notation, double> data;  // Storage for log probabilities and counts.
   vector<string> tag_list;
+  cout << "Getting tag grammar..." << endl;
   bool found = TagGrammarFinder::GetTrigramTagGrammarFromOrganizedRows(
       counts_file, &data, &tag_list);
   if (!found) {
@@ -73,6 +71,7 @@ int main(int argc, char *argv[]) {
   }
 
   // Begin writing out the WFSA, sparsely connected trigram version.
+  cout << "Starting to write WFSA for English phonemes." << endl;
   ofstream fout;
   fout.open(WFSA_FILE.c_str());
   fout << "END" << endl;

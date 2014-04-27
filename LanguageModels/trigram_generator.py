@@ -1,14 +1,16 @@
 #!/usr/bin/python
 # Input:
-# AA D
 # AE T
 # HH AH T
 # Output:
 # 1 HH AH T
+# 1 _ HH AH
+# 1 AH T _
 # (ignores 2 sound words)
 import sys
 from datetime import datetime
 
+# TODO: add spaces for word separation
 def gather_probs(line, probs):
   parts = line.split()
   if len(parts) <= 2:
@@ -26,6 +28,22 @@ def gather_probs(line, probs):
     else:
       probs[key] = 1
     i += 1
+  # Add space-initial and space-final trigrams.
+  space = '_'
+  p1 = parts[0]
+  p2 = parts[1]
+  key = (space, p1, p2)
+  if key in probs:
+    probs[key] += 1
+  else:
+    probs[key] = 1
+  p1 = parts[-2]
+  p2 = parts[-1]
+  key = (p1, p2, space)
+  if key in probs:
+    probs[key] += 1
+  else:
+    probs[key] = 1
 
 def main():
   file1 = sys.argv[1]

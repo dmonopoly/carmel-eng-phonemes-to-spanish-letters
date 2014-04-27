@@ -6,6 +6,7 @@
 # 1 AA D
 # 1 HH AH
 # 1 AH T
+# TODO: add spaces, too, like in trigram
 import sys
 from datetime import datetime
 
