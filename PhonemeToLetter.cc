@@ -42,7 +42,7 @@ void WriteLine(ofstream &fout, const string &node1, const string &node2,
     ss << "\"" << second << "\"";
     output = ss.str();
   }
-  fout << "(" << node1 << " (" << node2 << " " << input << " " << output << " " 
+  fout << "(" << node1 << " (" << node2 << " " << input << " " << output << " "
     << prob << end << "))" << endl;
 }
 
@@ -60,16 +60,45 @@ int main(int argc, char *argv[]) {
   // Get all English phonemes.
   cout << "Getting English phonemes..." << endl;
   set<string> eng_phonemes;
-  {
-    vector<string> observed_data;
-    bool got_obs_data = CypherReader::GetObservedData(filename_for_cypher,
-                                                      &observed_data,
-                                                      &eng_phonemes);
-    if (!got_obs_data) {
-      cerr << "Error getting English phonemes." << endl;
-      return 1;
-    }
-  }
+  eng_phonemes.insert("A");
+  eng_phonemes.insert("AE");
+  eng_phonemes.insert("AH");
+  eng_phonemes.insert("AO");
+  eng_phonemes.insert("AW");
+  eng_phonemes.insert("AY");
+  eng_phonemes.insert("B");
+  eng_phonemes.insert("CH");
+  eng_phonemes.insert("D");
+  eng_phonemes.insert("DH");
+  eng_phonemes.insert("EH");
+  eng_phonemes.insert("ER");
+  eng_phonemes.insert("EY");
+  eng_phonemes.insert("F");
+  eng_phonemes.insert("G");
+  eng_phonemes.insert("HH");
+  eng_phonemes.insert("IH");
+  eng_phonemes.insert("IY");
+  eng_phonemes.insert("JH");
+  eng_phonemes.insert("K");
+  eng_phonemes.insert("L");
+  eng_phonemes.insert("M");
+  eng_phonemes.insert("N");
+  eng_phonemes.insert("NG");
+  eng_phonemes.insert("OW");
+  eng_phonemes.insert("OY");
+  eng_phonemes.insert("P");
+  eng_phonemes.insert("R");
+  eng_phonemes.insert("S");
+  eng_phonemes.insert("SH");
+  eng_phonemes.insert("T");
+  eng_phonemes.insert("TH");
+  eng_phonemes.insert("UH");
+  eng_phonemes.insert("UW");
+  eng_phonemes.insert("V");
+  eng_phonemes.insert("W");
+  eng_phonemes.insert("Y");
+  eng_phonemes.insert("Z");
+  eng_phonemes.insert("ZH");
   // Get all Spanish letters.
   cout << "Getting Spanish letters..." << endl;
   set<string> letters;

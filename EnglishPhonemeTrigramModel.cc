@@ -8,6 +8,8 @@
 #include "TagGrammarFinder.h"
 #include "CypherReader.h"
 
+#define PRINT_PROBS true
+
 using namespace std;
 
 const string WFSA_FILE = "1_eng_phoneme_trigram.wfsa";
@@ -68,6 +70,15 @@ int main(int argc, char *argv[]) {
   if (!found) {
     cerr << "Error getting tag grammar." << endl;
     return 0;
+  }
+
+  if (PRINT_PROBS) {
+    ofstream fout;
+    fout.open("found_probs.txt");
+    for (map<Notation, double>::iterator it = data.begin(); it != data.end(); ++it) {
+      fout << it->first << ": " << it->second << endl;
+    }
+    fout.close();
   }
 
   // Begin writing out the WFSA, sparsely connected trigram version.
@@ -155,8 +166,6 @@ int main(int argc, char *argv[]) {
     }
   }
   fout.close();
-  fout.close();
   cout << "Written to " << WFSA_FILE << endl;
   return 0;
 }
-
