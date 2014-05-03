@@ -8,9 +8,7 @@
 # 1 AH T _
 # (ignores 2 sound words)
 import sys
-from datetime import datetime
 
-# TODO: add spaces for word separation
 def gather_probs(line, probs):
   parts = line.split()
   if len(parts) <= 2:
@@ -67,7 +65,7 @@ def main():
   print '-Finished writing to file %s-' % file2
 
 if len(sys.argv) != 3:
-  print 'Usage: python <exec> <target-file1> <target-file2>'
+  print 'Usage: python <exec> <input-file> <output-file>'
 else:
   main()
 
