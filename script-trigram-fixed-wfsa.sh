@@ -1,7 +1,7 @@
 #!/bin/sh
 #PBS -l walltime=1:00:00
 # cd $PBS_O_WORKDIR
-counts_file='LanguageModels/trigram_eng_phonemes.txt';
+counts_file='LanguageModels/trigram_eng_phonemes.txt'
 cipher_file='Ciphers/spanish.written_short.quoted.txt'
 # cipher_file='Ciphers/spanish.written_one_third.txt'
 # cipher_file='Ciphers/spanish.written.quoted.txt'
