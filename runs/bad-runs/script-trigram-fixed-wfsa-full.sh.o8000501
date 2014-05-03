@@ -1,0 +1,135 @@
+----------------------------------------
+Begin PBS Prologue Sat May  3 00:04:03 PDT 2014
+Job ID:            8000501.hpc-pbs.hpcc.usc.edu
+Username:          davidzha
+Group:             csci-ar
+Name:              script-trigram-fixed-wfsa-full.sh
+Queue:             main
+Shared Access:     no
+All Cores:         no
+Nodes:             hpc2550 
+TMPDIR:            /tmp/8000501.hpc-pbs.hpcc.usc.edu
+End PBS Prologue Sat May  3 00:04:04 PDT 2014
+----------------------------------------
+-PhonemeToLetter-
+Getting English phonemes...
+Getting Spanish letters...
+Starting to write Phoneme to Letter FST.
+Written to 2_phoneme_to_letter.fst
+-EnglishPhonemeTrigramModel-
+Getting tag grammar...
+Starting to write WFSA for English phonemes.
+Written to 1_eng_phoneme_trigram.wfsa
+"_" "P" "L" "UW" "M" "ER" "L" "OW" "_" "P" "OW" "L" "DH" "ER" "_" "CH" "ER" "TH" "_" "UW" "S" "R" "ER" "S" "UW" "Z" "N" "Z" "_" "Y" "UW" "CH" "OW" "TH" "R" "Z" "_" "CH" "Z" "S" "_" "W" "AO" "UW" "ZH" "Z" "DH" "ER" "_" "CH" "ER" "_" "TH" "OW" "_" "M" "OW" "S" "T" "Y" "OW"
+"_" "T" "OW" "P" "EH" "DH" "AO" "TH" "Z" "_" "P" "L" "UW" "M" "ER" "L" "Z" "_" "W" "AO" "ER" "_" "DH" "L" "OW" "DH" "OW" "_" "CH" "ER" "_" "TH" "OW" "_" "T" "Z" "S" "CH" "UW" "T" "UW" "NG" "S" "_" "D" "_" "ER" "ZH" "ER" "L" "T" "UW" "T" "UW" "Z" "_" "CH" "ER" "TH" "_" "HH" "OW" "M" "Z" "N" "Z" "_" "Y" "UW" "CH" "OW" "TH" "R" "Z"
+"_" "CH" "Z" "S" "_" "W" "AO" "UW" "ZH" "Z" "DH" "ER" "_" "CH" "ER" "_" "TH" "OW" "_" "M" "OW" "S" "T" "Y" "OW" "_"
+"_" "ER" "S" "_" "AO" "S" "_" "TH" "AO" "R" "OW" "L" "_" "CH" "ER" "_" "TH" "OW" "_" "M" "OW" "S" "T" "Y" "OW" "_" "CH" "ER" "_" "T" "AO" "D" "Z" "_" "S" "Z" "M" "AH" "L" "ER" "_" "S" "Z" "_" "W" "AO" "UW" "ER" "L" "Z" "_" "OW" "T" "Z" "L" "CH" "OW" "L" "_" "M" "ER" "_" "S" "Z" "_" "Y" "OW" "_" "M" "AO" "T" "Y" "Z"
+
+
+
+
+
+
+
+
+
+
+
+
+"_" "W" "AO" "ER" "_" "ER" "S" "_" "ER" "N" "DH" "Z" "_" "Y" "OW" "D" "_" "OW" "TH" "R" "AO" "S" "OW" "_" "CH" "UW" "HH" "ER" "L" "ER" "S" "T" "UW" "OW" "_" "ER" "S" "_" "TH" "Z" "N" "_" "OW" "AO" "DH" "Z" "L" "ER" "N" "_" "W" "AO" "ER" "_" "CH" "ER" "N" "DH" "ER" "_" "T" "OW" "N" "Z" "_" "ER" "N" "T" "L" "UW" "AH" "ER" "S" "_"
+
+"_" "W" "AO" "ER" "ZH" "OW" "S" "OW" "_" "P" "ER" "L" "Z" "_" "ER" "N" "DH" "Z" "_" "UW" "M" "P" "Z" "L" "DH" "OW" "_" "P" "Z" "T" "Z" "_" "OW" "_" "S" "AO" "ER" "N" "DH" "L" "Z" "_" "T" "AO" "ER" "S" "DH" "Z" "_" "AH" "OW" "N" "DH" "OW" "_" "W" "AO" "ER" "_" "ER" "S" "_" "TH" "OW" "_" "S" "OW" "L" "L" "OW" "T" "UW" "NG" "S"
+
+"_" "ER" "N" "_" "P" "AO" "ER" "N" "_" "CH" "ER" "_" "N" "OW" "AH" "ER" "L" "_" "W" "AO" "ER" "_" "ER" "N" "DH" "ER" "_" "N" "Z" "AH" "L" "ER" "CH" "UW" "T" "Y" "Z" "_" "Y" "UW" "CH" "OW" "TH" "R" "Z" "_" "TH" "Z" "N" "_" "L" "OW" "DH" "Z" "N" "_" "W" "AO" "ER" "_" "ER" "N" "DH" "OW" "AH" "OW"
+
+
+
+
+
+"_" "T" "AO" "OW" "S" "DH" "Z" "N" "_" "P" "AO" "CH" "Z" "_" "Y" "OW" "AH" "ER" "L" "_" "CH" "ER" "TH" "TH" "Z" "N" "_" "D" "_" "CH" "ER" "_" "DH" "Z" "CH" "Z" "N" "_" "S" "UW" "S" "R" "AO" "S" "Z" "N" "_" "TH" "ER" "_" "P" "OW" "L" "ER" "T" "EH" "OW" "S" "_" "DH" "OW" "S" "_" "AH" "UW" "ER" "S" "_" "T" "Z" "M" "Z"
+
+
+"_" "T" "AO" "OW" "S" "CH" "Z" "_" "TH" "TH" "ER" "R" "OW" "AH" "OW" "_" "OW" "_" "TH" "ER" "ER" "L" "_" "OW" "W" "AO" "ER" "TH" "TH" "Z" "N" "_" "L" "ER" "W" "AO" "UW" "ER" "AH" "L" "Z" "N" "_" "D" "_" "T" "OW" "L" "DH" "OW" "N" "_" "CH" "ER" "_" "CH" "ER" "N" "OW" "HH" "EH" "Z" "N" "_" "CH" "Z" "S" "CH" "ER" "_" "ER" "S"
+
+
+
+
+
+
+
+"_" "ER" "S" "DH" "ER" "S" "CH" "UW" "ER" "L" "OW" "_" "ER" "TH" "_" "M" "ER" "N" "M" "Z" "_" "OW" "L" "UW" "N" "DH" "NG" "DH" "ER" "TH" "ER" "N" "_" "N" "UW" "_" "L" "ER" "N" "AO" "T" "UW" "DH" "OW" "L" "OW" "_" "P" "OW" "L" "OW" "_" "N" "NG" "TH" "Z" "_" "ER" "TH" "TH" "Z" "_" "S" "Z" "_" "ER" "N" "DH" "OW" "AH" "OW"
+"_" "M" "AO" "D" "_" "AH" "UW" "ER" "S" "_" "T" "Z" "S" "_" "TH" "OW" "N" "_" "Y" "ER" "L" "UW" "CH" "OW" "N" "_" "W" "AO" "ER" "_" "CH" "Z" "S" "_" "AH" "ER" "TH" "UW" "OW" "S" "EH" "N" "_" "CH" "OW" "AH" "OW" "_" "D" "_" "L" "ER" "T" "ER" "AH" "EH" "OW" "_" "P" "Z" "L" "W" "AO" "ER" "_" "N" "ER"
+"_" "UW" "M" "OW" "R" "UW" "S" "OW" "AH" "OW" "_" "W" "AO" "ER" "_" "P" "Z" "L" "_" "R" "L" "OW" "S" "CH" "ER" "N" "_" "M" "OW" "ER" "N" "DH" "L" "Z" "N" "_" "W" "AO" "ER" "_" "TH" "ER" "_" "Y" "AO" "AH" "UW" "ER" "N" "ER" "S" "_" "T" "AO" "L" "OW" "CH" "Z" "_" "S" "Z" "_" "CH" "ER" "ZH" "OW" "L" "EH" "OW" "_" "CH" "ER"
+
+"_" "DH" "Z" "CH" "Z" "_" "OW" "TH" "OW" "AH" "OW" "AH" "OW" "_" "ER" "S" "_" "N" "AO" "_" "OW" "AO" "DH" "Z" "L" "_" "OW" "W" "AO" "ER" "TH" "_" "OW" "T" "OW" "AH" "OW" "L" "_" "N" "AO" "_" "TH" "UW" "AH" "L" "Z" "_" "T" "Z" "S" "_" "TH" "OW" "_" "P" "L" "Z" "M" "ER" "N" "OW" "_" "CH" "ER" "_" "OW" "W" "AO" "ER" "TH" "TH" "OW"
+
+"_" "HH" "UW" "S" "_" "OW" "TH" "_" "P" "UW" "ER" "_" "CH" "ER" "_" "TH" "OW" "_" "TH" "ER" "DH" "L" "OW" "_" "T" "Z" "M" "Z" "_" "OW" "TH" "TH" "EH" "_" "N" "ER" "_" "P" "L" "Z" "M" "ER" "DH" "ER" "_" "D" "_" "N" "UW" "S" "_" "CH" "AO" "CH" "OW" "_" "OW" "TH" "R" "AO" "S" "OW" "_" "TH" "Z" "_" "Y" "UW" "T" "UW" "ER" "L" "OW" "_"
+"_" "D" "_" "OW" "AO" "S" "_" "N" "OW" "TH" "UW" "ER" "L" "OW" "_" "T" "Z" "S" "_" "ER" "TH" "TH" "Z" "_" "N" "UW" "_" "Z" "DH" "L" "Z" "N" "_" "M" "OW" "D" "Z" "L" "ER" "N" "_" "D" "_" "T" "Z" "S" "DH" "UW" "S" "AO" "Z" "N" "_" "P" "ER" "S" "N" "OW" "M" "UW" "ER" "S" "DH" "Z" "N" "_" "S" "Z" "_" "N" "ER" "_" "TH" "Z"
+
+
+
+"_" "M" "ER" "N" "M" "Z" "_" "P" "AO" "ER" "AH" "TH" "Z" "_" "CH" "ER" "T" "EH" "OW" "_" "W" "AO" "ER" "_" "S" "UW" "S" "R" "AO" "S" "Z" "_" "TH" "TH" "ER" "R" "OW" "AH" "OW" "_" "OW" "TH" "_" "T" "OW" "AH" "OW" "TH" "TH" "ER" "L" "Z" "_" "CH" "ER" "TH" "_" "HH" "ER" "AH" "Z" "_" "D" "_" "W" "AO" "ER" "_" "N" "UW"
+"_" "OW" "TH" "R" "AO" "S" "Z" "_" "N" "ER" "_" "TH" "ER" "_" "P" "Z" "CH" "EH" "OW" "_" "T" "Z" "M" "P" "OW" "L" "OW" "L" "_" "ER" "L" "OW" "_" "CH" "Z" "S" "_" "R" "OW" "TH" "OW" "Z" "L" "_" "Y" "ER" "L" "M" "OW" "S" "Z" "_" "CH" "ER" "_" "OW" "M" "OW" "CH" "EH" "N" "_" "CH" "ER" "_" "R" "OW" "AO" "TH" "OW" "_"
+"_" "P" "Z" "L" "W" "AO" "ER" "_" "DH" "ER" "S" "EH" "OW" "_" "M" "AO" "D" "_" "OW" "T" "Z" "M" "Z" "CH" "OW" "CH" "OW" "_" "T" "Z" "S" "CH" "UW" "T" "UW" "NG" "S" "_" "P" "OW" "L" "OW" "_" "DH" "Z" "CH" "Z" "_" "W" "AO" "ER" "_" "S" "Z" "_" "ER" "L" "OW" "_" "T" "OW" "AH" "OW" "TH" "TH" "ER" "L" "Z"
+
+
+
+"_" "S" "Z" "T" "Y" "ER" "N" "_" "TH" "ER" "D" "ER" "S" "CH" "Z" "_" "CH" "ER" "_" "T" "TH" "OW" "L" "Z" "_" "ER" "S" "_" "T" "TH" "OW" "L" "Z" "_" "D" "_" "TH" "Z" "N" "_" "CH" "EH" "OW" "N" "_" "CH" "ER" "_" "DH" "AO" "L" "AH" "UW" "Z" "_" "ER" "S" "_" "DH" "AO" "L" "AH" "UW" "Z" "_" "D" "_" "OW" "N" "EH" "_"
+
+"_" "OW" "_" "P" "ER" "L" "CH" "ER" "L" "_" "ER" "TH" "_" "ZH" "AO" "UW" "T" "UW" "Z" "_" "TH" "TH" "ER" "S" "NG" "N" "ER" "TH" "ER" "_" "TH" "OW" "_" "HH" "OW" "S" "DH" "OW" "N" "EH" "OW" "_" "CH" "ER" "_" "DH" "Z" "CH" "Z" "_" "OW" "W" "AO" "ER" "TH" "TH" "Z" "_" "W" "AO" "ER" "_" "TH" "ER" "EH" "OW" "_" "ER" "S" "_" "TH" "Z" "N"
+"_" "TH" "UW" "AH" "L" "Z" "N" "_" "OW" "N" "EH" "_" "CH" "ER" "_" "ER" "S" "T" "OW" "S" "DH" "OW" "M" "ER" "S" "DH" "Z" "N" "_" "T" "Z" "M" "Z" "_" "CH" "ER" "_" "P" "ER" "S" "CH" "ER" "S" "T" "UW" "OW" "N" "_" "AH" "OW" "DH" "OW" "TH" "TH" "OW" "N" "_" "CH" "ER" "N" "OW" "HH" "EH" "Z" "N" "_"
+"_" "Y" "ER" "L" "UW" "CH" "OW" "N" "_" "L" "ER" "W" "AO" "UW" "ER" "AH" "L" "Z" "N" "_" "OW" "M" "Z" "L" "ER" "N" "_" "DH" "Z" "L" "M" "ER" "S" "DH" "OW" "N" "_" "D" "_" "CH" "UW" "N" "P" "OW" "L" "OW" "DH" "ER" "N" "_" "UW" "M" "P" "Z" "N" "UW" "AH" "TH" "ER" "N" "_" "D"
+
+
+
+
+
+"_" "HH" "UW" "ER" "L" "Z" "N" "_" "D" "_" "CH" "ER" "N" "T" "Z" "M" "AO" "S" "OW" "TH" "ER" "N" "_" "R" "UW" "R" "OW" "S" "DH" "ER" "N" "_" "M" "ER" "ZH" "Z" "L" "_" "ER" "N" "DH" "OW" "AH" "OW" "_" "T" "Z" "S" "_" "AH" "ER" "L" "S" "OW" "L" "CH" "Z" "_" "CH" "ER" "TH" "_" "T" "OW" "L" "P" "UW" "Z" "_"
+
+
+
+
+"_" "N" "Z" "TH" "Z" "_" "ER" "L" "OW" "_" "OW" "HH" "OW" "AH" "TH" "ER" "_" "D" "_" "AH" "UW" "ER" "S" "_" "T" "L" "UW" "OW" "CH" "Z" "_" "P" "ER" "L" "Z" "_" "N" "Z" "AH" "L" "ER" "_" "DH" "Z" "CH" "Z" "N" "_" "ER" "N" "DH" "OW" "AH" "OW" "_" "AH" "UW" "ER" "S" "_" "T" "Z" "S" "_" "L" "ER" "UW" "S" "OW" "TH" "CH" "Z" "N"
+
+"_" "DH" "Z" "P" "OW" "AH" "OW" "_" "D" "_" "T" "AO" "OW" "S" "CH" "Z" "_" "ER" "S" "_" "OW" "TH" "TH" "ER" "S" "CH" "ER" "_" "L" "Z" "AH" "NG" "_" "OW" "W" "AO" "ER" "TH" "_" "EH" "CH" "Z" "TH" "Z" "_" "CH" "ER" "_" "M" "OW" "Y" "Z" "M" "OW" "_" "W" "AO" "ER" "_" "ER" "L" "OW" "_" "DH" "Z" "CH" "Z" "_" "CH" "ER" "_" "Z" "L" "Z" "_"
+
+
+
+
+
+
+
+
+
+
+
+
+"_" "CH" "UW" "Z" "_" "P" "L" "UW" "ER" "N" "OW" "_" "OW" "_" "P" "Z" "S" "ER" "L" "_" "ER" "S" "_" "ER" "HH" "ER" "DH" "Z" "_" "TH" "Z" "_" "W" "AO" "ER" "_" "CH" "ER" "N" "ER" "OW" "AH" "OW" "_"
+
+"_" "AH" "UW" "N" "OW" "AH" "AO" "ER" "TH" "Z" "N" "_" "W" "AO" "ER" "_" "DH" "Z" "M" "OW" "CH" "OW" "N" "_" "CH" "ER" "_" "Z" "L" "EH" "S" "_" "D" "_" "TH" "TH" "ER" "S" "OW" "N" "_" "CH" "ER" "_" "M" "Z" "Y" "Z" "_" "TH" "AO" "ER" "S" "R" "Z" "N" "_" "N" "UW" "R" "TH" "Z" "N" "_" "Y" "OW" "AH" "EH" "OW" "_" "W" "AO" "ER"
+
+
+"_" "ER" "S" "T" "OW" "ZH" "ER" "_" "N" "UW" "S" "Z" "_" "M" "Z" "L" "L" "UW" "NG" "S" "_" "N" "UW" "M" "P" "TH" "ER" "_" "M" "OW" "N" "_" "OW" "_" "ER" "N" "DH" "Z" "_" "N" "AO" "P" "TH" "UW" "NG" "_" "N" "AO" "_" "UW" "S" "CH" "AO" "N" "DH" "L" "UW" "OW" "_" "P" "Z" "L" "W" "AO" "ER" "_" "CH" "ER"
+
+
+"_" "P" "Z" "CH" "EH" "OW" "_" "ER" "N" "DH" "OW" "L" "_" "OW" "TH" "_" "L" "UW" "ER" "N" "R" "Z" "_" "CH" "ER" "_" "AO" "S" "OW" "_" "T" "AO" "T" "Y" "UW" "TH" "TH" "OW" "CH" "OW" "_" "N" "OW" "T" "NG" "_" "N" "AO" "_" "ER" "N" "P" "OW" "CH" "OW" "_" "D" "_" "TH" "ER" "_" "CH" "UW" "Z" "_" "CH" "Z" "N"
+
+"_" "N" "ER" "M" "OW" "S" "OW" "_" "D" "_" "S" "Z" "_" "CH" "ER" "ZH" "NG" "_" "CH" "ER" "_" "P" "OW" "L" "ER" "T" "ER" "L" "TH" "ER" "_" "M" "OW" "TH" "_" "TH" "OW" "_" "HH" "OW" "T" "UW" "TH" "UW" "CH" "OW" "CH" "_" "T" "Z" "S" "_" "W" "AO" "ER" "_" "TH" "OW" "_" "Y" "OW" "AH" "EH" "OW" "_" "Y" "ER" "T" "Y" "Z"
+
+
+
+
+
+----------------------------------------
+Begin PBS Epilogue Sat May  3 00:09:10 PDT 2014
+Job ID:           8000501.hpc-pbs.hpcc.usc.edu
+Username:         davidzha
+Group:            csci-ar
+Job Name:         script-trigram-fixed-wfsa-full.sh
+Session:          1271
+Limits:           neednodes=1,nodes=1,walltime=10:00:00
+Resources:        cput=00:04:38,mem=15930928kb,vmem=16048292kb,walltime=00:05:07
+Queue:            main
+Shared Access:    no
+End PBS Epilogue Sat May  3 00:09:11 PDT 2014
+----------------------------------------

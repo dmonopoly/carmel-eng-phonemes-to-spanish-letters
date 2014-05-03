@@ -1,0 +1,150 @@
+option train-cascade = 
+
+	(3162 states / 1791680 arcs)
+Using random seed -R 1578670724
+Caching derivations:
+.......Computed cached derivations: 166.32 sec, memory +3.088G (278.1M -> 3.359G); from OS: +15.03G (569.7M -> 15.58G)
+Training took 215.75 sec, memory -53.92K (166.2M -> 166.1M); from OS: 0 (345.7M -> 345.7M)
+ERROR: std::bad_alloc
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+)
+Empty or invalid result of composition with transducer "2_phoneme_to_letter.fst.trained".
+No derivations found for 70 of 100 inputs
+Viterbi (best path) product of probs=e^-516.029876274761, probability=2^-744.474 per-input-symbol-perplexity(N=6901)=2^0.107879 per-line-perplexity(N=30)=2^24.8158, excluding 70 0 probabilities (i.e. real ppx is infinite).

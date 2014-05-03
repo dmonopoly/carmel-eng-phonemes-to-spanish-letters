@@ -1,0 +1,39 @@
+----------------------------------------
+Begin PBS Prologue Fri May  2 23:21:00 PDT 2014
+Job ID:            8000324.hpc-pbs.hpcc.usc.edu
+Username:          davidzha
+Group:             csci-ar
+Name:              script-trigram-fixed-wfsa-short.sh
+Queue:             quick
+Shared Access:     no
+All Cores:         no
+Nodes:             hpc2313 
+TMPDIR:            /tmp/8000324.hpc-pbs.hpcc.usc.edu
+End PBS Prologue Fri May  2 23:21:00 PDT 2014
+----------------------------------------
+-PhonemeToLetter-
+Getting English phonemes...
+Getting Spanish letters...
+Starting to write Phoneme to Letter FST.
+Written to 2_phoneme_to_letter.fst
+-EnglishPhonemeTrigramModel-
+Getting tag grammar...
+Starting to write WFSA for English phonemes.
+Written to 1_eng_phoneme_trigram.wfsa
+"_" "P" "L" "UW" "M" "ER" "L" "OW" "_" "P" "OW" "L" "DH" "ER" "_" "CH" "ER" "TH" "_" "UW" "S" "R" "ER" "S" "UW" "Z" "N" "Z" "_" "Y" "UW" "CH" "OW" "TH" "R" "Z" "_" "CH" "Z" "S" "_" "W" "AO" "UW" "ZH" "Z" "DH" "ER" "_" "CH" "ER" "_" "TH" "OW" "_" "M" "OW" "S" "T" "Y" "OW"
+"_" "T" "OW" "P" "EH" "DH" "AO" "TH" "Z" "_" "P" "L" "UW" "M" "ER" "L" "Z" "_" "W" "AO" "ER" "_" "DH" "L" "OW" "DH" "OW" "_" "CH" "ER" "_" "TH" "OW" "_" "T" "Z" "S" "CH" "UW" "T" "UW" "NG" "S" "_" "D" "_" "ER" "ZH" "ER" "L" "T" "UW" "T" "UW" "Z" "_" "CH" "ER" "TH" "_" "HH" "OW" "M" "Z" "N" "Z" "_" "Y" "UW" "CH" "OW" "TH" "R" "Z"
+"_" "CH" "Z" "S" "_" "W" "AO" "UW" "ZH" "Z" "DH" "ER" "_" "CH" "ER" "_" "TH" "OW" "_" "M" "OW" "S" "T" "Y" "OW" "_"
+"_" "ER" "S" "_" "AO" "S" "_" "TH" "AO" "R" "OW" "L" "_" "CH" "ER" "_" "TH" "OW" "_" "M" "OW" "S" "T" "Y" "OW" "_" "CH" "ER" "_" "T" "AO" "D" "Z" "_" "S" "Z" "M" "AH" "L" "ER" "_" "S" "Z" "_" "W" "AO" "UW" "ER" "L" "Z" "_" "OW" "T" "Z" "L" "CH" "OW" "L" "_" "M" "ER" "_" "S" "Z" "_" "Y" "OW" "_" "M" "AO" "T" "Y" "Z"
+----------------------------------------
+Begin PBS Epilogue Fri May  2 23:39:36 PDT 2014
+Job ID:           8000324.hpc-pbs.hpcc.usc.edu
+Username:         davidzha
+Group:            csci-ar
+Job Name:         script-trigram-fixed-wfsa-short.sh
+Session:          2365
+Limits:           neednodes=1,nodes=1,walltime=01:00:00
+Resources:        cput=00:18:14,mem=1049864kb,vmem=1159412kb,walltime=00:18:36
+Queue:            quick
+Shared Access:    no
+End PBS Epilogue Fri May  2 23:39:36 PDT 2014
+----------------------------------------
