@@ -8,16 +8,16 @@ const string Notation::NULL_DELIM = "NULL";  // Signifies delim never used.
 
 Notation::Notation() {
 }
-Notation::Notation(string predicate, initializer_list<string> first_args) {
-  this->predicate = predicate;
-  for (string s : first_args)
-    this->first.push_back(s);
-  this->delimiter = Notation::NULL_DELIM;
-  this->first_delimiter = Notation::SEQ_DELIM;
-  this->second_delimiter = Notation::NULL_DELIM;
-
-  this->repr_ = this->GenerateRepr();
-}
+// Notation::Notation(string predicate, initializer_list<string> first_args) {
+//   this->predicate = predicate;
+//   for (string s : first_args)
+//     this->first.push_back(s);
+//   this->delimiter = Notation::NULL_DELIM;
+//   this->first_delimiter = Notation::SEQ_DELIM;
+//   this->second_delimiter = Notation::NULL_DELIM;
+// 
+//   this->repr_ = this->GenerateRepr();
+// }
 Notation::Notation(string predicate, vector<string> first) {
   this->predicate = predicate;
   this->first = first;
@@ -27,16 +27,16 @@ Notation::Notation(string predicate, vector<string> first) {
 
   this->repr_ = this->GenerateRepr();
 }
-Notation::Notation(string predicate, initializer_list<string> first_args, string first_delim) {
-  this->predicate = predicate;
-  for (string s : first_args)
-    this->first.push_back(s);
-  this->delimiter = Notation::NULL_DELIM;
-  this->first_delimiter = first_delim;
-  this->second_delimiter = Notation::NULL_DELIM;
-
-  this->repr_ = this->GenerateRepr();
-}
+// Notation::Notation(string predicate, initializer_list<string> first_args, string first_delim) {
+//   this->predicate = predicate;
+//   for (string s : first_args)
+//     this->first.push_back(s);
+//   this->delimiter = Notation::NULL_DELIM;
+//   this->first_delimiter = first_delim;
+//   this->second_delimiter = Notation::NULL_DELIM;
+// 
+//   this->repr_ = this->GenerateRepr();
+// }
 Notation::Notation(string predicate, vector<string> first, string first_delim) {
   this->predicate = predicate;
   this->first = first;
@@ -46,19 +46,19 @@ Notation::Notation(string predicate, vector<string> first, string first_delim) {
 
   this->repr_ = this->GenerateRepr();
 }
-Notation::Notation(string predicate, initializer_list<string> first_args,
-           string delimiter, initializer_list<string> second_args) {
-  this->predicate = predicate;
-  for (string s : first_args)
-    this->first.push_back(s);
-  this->delimiter = delimiter;
-  for (string s : second_args)
-    this->second.push_back(s);
-  this->first_delimiter = Notation::SEQ_DELIM;
-  this->second_delimiter = Notation::SEQ_DELIM;
-
-  this->repr_ = this->GenerateRepr();
-}
+// Notation::Notation(string predicate, initializer_list<string> first_args,
+//            string delimiter, initializer_list<string> second_args) {
+//   this->predicate = predicate;
+//   for (string s : first_args)
+//     this->first.push_back(s);
+//   this->delimiter = delimiter;
+//   for (string s : second_args)
+//     this->second.push_back(s);
+//   this->first_delimiter = Notation::SEQ_DELIM;
+//   this->second_delimiter = Notation::SEQ_DELIM;
+// 
+//   this->repr_ = this->GenerateRepr();
+// }
 Notation::Notation(string predicate, vector<string> first, string delimiter,
                    vector<string> second) {
   this->predicate = predicate;

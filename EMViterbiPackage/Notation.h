@@ -4,10 +4,11 @@
 #ifndef NOTATION_H_
 #define NOTATION_H_
 
-#include <initializer_list>
+// #include <initializer_list>
 #include <iostream>
 #include <vector>
 #include <sstream>
+#include <string>
 
 using namespace std;
 
@@ -37,12 +38,12 @@ class Notation {
   vector<string> first;  // Each string can be used as a key to the map.
   vector<string> second;
   Notation();
-  Notation(string predicate, initializer_list<string> first_args);
+//   Notation(string predicate, initializer_list<string> first_args);
   Notation(string predicate, vector<string> first);
-  Notation(string predicate, initializer_list<string> first_args, string first_delim);
+//   Notation(string predicate, initializer_list<string> first_args, string first_delim);
   Notation(string predicate, vector<string> first, string first_delim);
-  Notation(string predicate, initializer_list<string> first_args,
-           string delimiter, initializer_list<string> second_args);
+//   Notation(string predicate, initializer_list<string> first_args,
+//            string delimiter, initializer_list<string> second_args);
   Notation(string predicate, vector<string> first, string delimiter,
            vector<string> second);
 
