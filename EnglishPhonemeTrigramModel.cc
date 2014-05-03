@@ -1,8 +1,11 @@
+#include <stdexcept>
+#include <stdlib.h>
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <vector>
 #include <map>
+#include <string>
 
 #include "EMViterbiPackage/Notation.h"
 #include "TagGrammarFinder.h"
@@ -88,10 +91,12 @@ int main(int argc, char *argv[]) {
   fout << "END" << endl;
   double lambda2 = .9;
   // Unigram probs: START->x
-  for (auto s : tag_list) {
+  for (int i = 0; i < tag_list.size(); ++i) {
+    string s = tag_list[i];
     string node_name = s;
     string node_name_sharp = node_name + "#";
-    Notation n("P", {s});
+    vector<string> vec; vec.push_back(s);
+    Notation n("P", vec);
     try {
       double prob = data.at(n);
       WriteLine(fout, "START", node_name, EMPTY, s, prob, "!");
@@ -113,9 +118,13 @@ int main(int argc, char *argv[]) {
   }
   // Bigram probs.
   double lambda1 = .9;
-  for (auto s1 : tag_list) {
-    for (auto s2 : tag_list) {
-      Notation n("P", {s2}, TagGrammarFinder::GIVEN_DELIM, {s1});
+  for (int i = 0; i < tag_list.size(); ++i) {
+    string s1 = tag_list[i];
+    for (int j = 0; j < tag_list.size(); ++j) {
+      string s2 = tag_list[j];
+      vector<string> vec2; vec2.push_back(s2);
+      vector<string> vec; vec.push_back(s1);
+      Notation n("P", vec2, TagGrammarFinder::GIVEN_DELIM, vec);
       string node1_name = s1;
       string node1_name_sharp = s1 + "#";
       string node2_name = s1 + NODE_NAME_DELIM + s2;
@@ -148,10 +157,15 @@ int main(int argc, char *argv[]) {
     }
   }
   // Trigram probs.
-  for (auto s1 : tag_list) {
-    for (auto s2 : tag_list) {
-      for (auto s3 : tag_list) {
-        Notation n("P", {s3}, TagGrammarFinder::GIVEN_DELIM, {s1, s2});
+  for (int i = 0; i < tag_list.size(); ++i) {
+    string s1 = tag_list[i];
+    for (int j = 0; j < tag_list.size(); ++j) {
+      string s2 = tag_list[j];
+      for (int k = 0; k < tag_list.size(); ++k) {
+        string s3 = tag_list[k];
+        vector<string> vec3; vec3.push_back(s3);
+        vector<string> vec1and2; vec1and2.push_back(s1); vec1and2.push_back(s2);
+        Notation n("P", vec3, TagGrammarFinder::GIVEN_DELIM, vec1and2);
         string node1_name_sharp = s1 + NODE_NAME_DELIM + s2 + "#";
         string node2_name = s2 + NODE_NAME_DELIM + s3;
         try {

@@ -4,6 +4,7 @@
 #ifndef TAG_GRAMMAR_H_
 #define TAG_GRAMMAR_H_
 
+#include <stdexcept>
 #include <cmath>
 #include <iostream>
 #include <fstream>
