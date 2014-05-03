@@ -136,7 +136,7 @@ bool TagGrammarFinder::GetTrigramTagGrammarFromOrganizedRows(
 
       // Trigram
       vector<string> vec123; vec123.push_back(sound1); vec123.push_back(sound2); vec123.push_back(sound3);
-      vector<string> vec12arb; vec123.push_back(sound1); vec123.push_back(sound2); vec123.push_back(TagGrammarFinder::ARB_SOUND_PLACEHOLDER);
+      vector<string> vec12arb; vec12arb.push_back(sound1); vec12arb.push_back(sound2); vec12arb.push_back(TagGrammarFinder::ARB_SOUND_PLACEHOLDER);
       Notation n_trigram_count_seq("C", vec123,
                                    TagGrammarFinder::SEQ_DELIM);
       Notation n_trigram_count_seq_total(TagGrammarFinder::SIGMA + "C", vec12arb, TagGrammarFinder::SEQ_DELIM);
