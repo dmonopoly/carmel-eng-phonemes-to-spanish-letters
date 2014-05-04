@@ -10,7 +10,6 @@
 import sys
 from datetime import datetime
 
-# TODO: add spaces for word separation
 def gather_probs(line, probs):
   parts = line.split()
   if len(parts) <= 2:

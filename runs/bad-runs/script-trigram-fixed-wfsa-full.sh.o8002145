@@ -1,0 +1,35 @@
+----------------------------------------
+Begin PBS Prologue Sat May  3 08:35:43 PDT 2014
+Job ID:            8002145.hpc-pbs.hpcc.usc.edu
+Username:          davidzha
+Group:             csci-ar
+Name:              script-trigram-fixed-wfsa-full.sh
+Queue:             main
+Shared Access:     no
+All Cores:         no
+Nodes:             hpc1723 
+TMPDIR:            /tmp/8002145.hpc-pbs.hpcc.usc.edu
+End PBS Prologue Sat May  3 08:35:43 PDT 2014
+----------------------------------------
+-PhonemeToLetter-
+Getting English phonemes...
+Getting Spanish letters...
+Starting to write Phoneme to Letter FST.
+Written to 2_phoneme_to_letter.fst
+-EnglishPhonemeTrigramModel-
+Getting tag grammar...
+Starting to write WFSA for English phonemes.
+Written to 1_eng_phoneme_trigram.wfsa
+----------------------------------------
+Begin PBS Epilogue Sat May  3 14:35:52 PDT 2014
+Job ID:           8002145.hpc-pbs.hpcc.usc.edu
+Username:         davidzha
+Group:            csci-ar
+Job Name:         script-trigram-fixed-wfsa-full.sh
+Session:          31655
+Limits:           neednodes=1,nodes=1,walltime=06:00:00
+Resources:        cput=05:59:59,mem=670712kb,vmem=737896kb,walltime=06:00:08
+Queue:            main
+Shared Access:    no
+End PBS Epilogue Sat May  3 14:35:52 PDT 2014
+----------------------------------------
