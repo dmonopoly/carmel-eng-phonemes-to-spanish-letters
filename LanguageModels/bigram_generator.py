@@ -6,9 +6,7 @@
 # 1 AA D
 # 1 HH AH
 # 1 AH T
-# TODO: add spaces, too, like in trigram
 import sys
-from datetime import datetime
 
 def gather_probs(line, probs):
   parts = line.split()
@@ -26,6 +24,20 @@ def gather_probs(line, probs):
     else:
       probs[key] = 1
     i += 1
+  # Add space-initial and space-final bigrams.
+  space = '_'
+  p1 = parts[0]
+  key = (space, p1)
+  if key in probs:
+    probs[key] += 1
+  else:
+    probs[key] = 1
+  p1 = parts[-1]
+  key = (p1, space)
+  if key in probs:
+    probs[key] += 1
+  else:
+    probs[key] = 1
 
 def main():
   file1 = sys.argv[1]
@@ -33,8 +45,8 @@ def main():
   fin = open(file1, 'r')
   fout = open(file2, 'w')
 
-  print '-Reading file %s-' % file1
-  # Map of (phon1, phon2, phon3) to count, e.g. (HH AH T) => 23
+  print '-Reading file %s-' % file6
+  # Map of (phon1, phon2) to count, e.g. (HH AH) => 23
   probs = {}
   for i, line in enumerate(fin):
     line = line.rstrip()
