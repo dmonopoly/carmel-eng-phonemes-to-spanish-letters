@@ -3,3 +3,4 @@
 *.swp
 *.out
 tmp.txt
+cipher.data*

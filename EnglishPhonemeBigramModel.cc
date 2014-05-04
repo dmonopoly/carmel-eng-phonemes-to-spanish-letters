@@ -1,6 +1,8 @@
 // Generates a sparse WFSA based on the given bigram counts file and the FST
 // using the given cypher and the counts file.
 
+#include <stdexcept>
+#include <stdlib.h>
 #include <iostream>
 #include <fstream>
 #include <sstream>
