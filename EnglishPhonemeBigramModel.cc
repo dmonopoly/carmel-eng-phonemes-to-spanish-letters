@@ -12,6 +12,8 @@
 #include "TagGrammarFinder.h"
 #include "CypherReader.h"
 
+#define PRINT_PROBS true
+
 using namespace std;
 
 const string WFSA_FILE = "1_eng_phoneme_trigram.wfsa";
@@ -36,8 +38,8 @@ void WriteLine(ofstream &fout, const string &node1, const string &node2,
 }
 
 int main(int argc, char *argv[]) {
-  if (argc != 3) {
-    cerr << "Usage: ./<exec> <bigram-counts-file> <cyphertext>" << endl;
+  if (argc != 2) {
+    cerr << "Usage: ./<exec> <bigram-counts-file>" << endl;
     return 0;
   }
   string filename_for_bigrams = argv[1];
@@ -51,16 +53,13 @@ int main(int argc, char *argv[]) {
     return 0;
   }
 
-  // Get observed data for WFST.
-  string filename_for_cypher = argv[2];
-  vector<string> observed_data;
-  set<string> obs_symbols;
-  bool got_obs_data = CypherReader::GetObservedData(filename_for_cypher,
-                                                    &observed_data,
-                                                    &obs_symbols);
-  if (!got_obs_data) {
-    cerr << "Error getting observed data." << endl;
-    return 0;
+  if (PRINT_PROBS) {
+    ofstream fout;
+    fout.open("found_bigram_probs.txt");
+    for (map<Notation, double>::iterator it = data.begin(); it != data.end(); ++it) {
+      fout << it->first << ": " << it->second << endl;
+    }
+    fout.close();
   }
 
   // Begin writing out the WFSA.
@@ -70,7 +69,8 @@ int main(int argc, char *argv[]) {
   double prob_to_end = .0001;
   double lambda = .9;
   // Unigram probs.
-  for (auto s : tag_list) {
+  for (int i = 0; i < tag_list.size(); ++i) {
+    string s = tag_list[i];
     string node_name = s;
     string node_name_sharp = node_name + "#";
     vector<string> vec; vec.push_back(s);
@@ -92,8 +92,10 @@ int main(int argc, char *argv[]) {
     }
   }
   // Bigram probs.
-  for (auto s1 : tag_list) {
-    for (auto s2 : tag_list) {
+  for (int i = 0; i < tag_list.size(); ++i) {
+    string s1 = tag_list[i];
+    for (int j = 0; j < tag_list.size(); ++j) {
+      string s2 = tag_list[j];
       vector<string> vec1; vec1.push_back(s1);
       vector<string> vec2; vec2.push_back(s2);
       Notation n("P", vec2, TagGrammarFinder::GIVEN_DELIM, vec1);

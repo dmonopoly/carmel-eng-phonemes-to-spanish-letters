@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 
   if (PRINT_PROBS) {
     ofstream fout;
-    fout.open("found_probs.txt");
+    fout.open("found_trigram_probs.txt");
     for (map<Notation, double>::iterator it = data.begin(); it != data.end(); ++it) {
       fout << it->first << ": " << it->second << endl;
     }
