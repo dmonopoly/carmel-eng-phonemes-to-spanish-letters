@@ -17,6 +17,7 @@ Getting Spanish letters...
 Starting to write Phoneme to Letter FST.
 Written to 2_phoneme_to_letter.fst
 Written to 1_eng_phoneme_trigram.wfsa
+
 "_" "P" "L" "AY" "M" "AW" "L" "UH" "_" "P" "UH" "L" "T" "AW" "_" "JH" "AW" "S" "_" "AY" "TH" "T" "AW" "TH" "AY" "ER" "NG" "ER" "_" "W" "AY" "JH" "UH" "S" "T" "ER" "_" "JH" "ER" "TH" "_" "AO" "R" "AY" "SH" "ER" "T" "AW" "_" "JH" "AW" "_" "S" "UH" "_" "M" "UH" "TH" "SH" "W" "UH"
 "_" "SH" "UH" "P" "OY" "T" "R" "S" "ER" "_" "P" "L" "AY" "M" "AW" "L" "ER" "_" "AO" "R" "AW" "_" "T" "L" "UH" "T" "UH" "_" "JH" "AW" "_" "S" "UH" "_" "SH" "ER" "TH" "JH" "AY" "SH" "AY" "UW" "TH" "_" "D" "_" "AW" "SH" "AW" "L" "SH" "AY" "SH" "AY" "ER" "_" "JH" "AW" "S" "_" "F" "UH" "M" "ER" "NG" "ER" "_" "W" "AY" "JH" "UH" "S" "T" "ER"
 "_" "JH" "ER" "TH" "_" "AO" "R" "AY" "SH" "ER" "T" "AW" "_" "JH" "AW" "_" "S" "UH" "_" "M" "UH" "TH" "SH" "W" "UH" "_"
