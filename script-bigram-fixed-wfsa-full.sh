@@ -12,4 +12,5 @@ clang++ -g EnglishPhonemeBigramModel.cc EMViterbiPackage/Notation.cc CypherReade
 carmel --train-cascade -HJ -X .99999 -! 25 $cipher_file 1_eng_phoneme_trigram.wfsa 2_phoneme_to_letter.fst
 awk 'NF>0' $cipher_file > cipher.data.noe
 # carmel --project-right --project-identity-fsa -HJ 2_phoneme_to_letter.fst.trained > 2_phoneme_to_letter.fst.noe
-cat cipher.data.noe | carmel -qbsriWEIk 1 2_phoneme_to_letter.fst.trained
+carmel --project-right --project-identity-fsa -HJ 1_eng_phoneme_trigram.wfsa.trained > 1_eng_phoneme_trigram.wfsa.noe 
+cat cipher.data.noe | carmel -qbsriWEIk 1 1_eng_phoneme_trigram.wfsa.noe 2_phoneme_to_letter.fst.trained
