@@ -1,8 +1,9 @@
 // Reads count data and determines P(x), P(x|y), P(y|x), etc. for all tags x,y.
-// Does trigrams now!
+// This version does NOT have smoothing, which is important for sparse WFSAs so
+// that 0 probabilities are left out.
 
-#ifndef TAG_GRAMMAR_H_
-#define TAG_GRAMMAR_H_
+#ifndef TAG_GRAMMAR_FINDER_SPARSE_H_
+#define TAG_GRAMMAR_FINDER_SPARSE_H_
 
 #include <stdexcept>
 #include <cmath>
@@ -16,7 +17,7 @@
 
 using namespace std;
 
-namespace TagGrammarFinder {
+namespace TagGrammarFinderSparse {
   const string GIVEN_DELIM = "|";
   const string AND_DELIM = ",";
   const string SEQ_DELIM = " ";
@@ -37,4 +38,4 @@ namespace TagGrammarFinder {
                                              map<Notation, double> *data,
                                              vector<string> *tag_list);
 }
-#endif // End TAG_GRAMMAR_H_
+#endif // End TAG_GRAMMAR_FINDER_SPARSE_H_

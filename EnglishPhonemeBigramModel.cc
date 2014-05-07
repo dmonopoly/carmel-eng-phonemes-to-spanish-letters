@@ -11,14 +11,14 @@
 #include <set>
 
 #include "EMViterbiPackage/Notation.h"
-#include "TagGrammarFinder.h"
+#include "TagGrammarFinderSparse.h"
 #include "CypherReader.h"
 
 #define PRINT_PROBS true
 
 using namespace std;
 
-const string WFSA_FILE = "1_eng_phoneme_trigram.wfsa";
+const string WFSA_FILE = "1_eng_phoneme_lm.wfsa";
 const string EMPTY = "*e*";
 
 void WriteLine(ofstream &fout, const string &node1, const string &node2,
@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
   // Get LM data for WFSA.
   map<Notation, double> data;  // Storage for log probabilities and counts.
   vector<string> tag_list;
-  bool found = TagGrammarFinder::GetBigramTagGrammarFromOrganizedRows(
+  bool found = TagGrammarFinderSparse::GetBigramTagGrammarFromOrganizedRows(
       filename_for_bigrams, &data, &tag_list);
   if (!found) {
     cerr << "Error getting tag grammar." << endl;
@@ -100,13 +100,14 @@ int main(int argc, char *argv[]) {
       string s2 = tag_list[j];
       vector<string> vec1; vec1.push_back(s1);
       vector<string> vec2; vec2.push_back(s2);
-      Notation n("P", vec2, TagGrammarFinder::GIVEN_DELIM, vec1);
+      Notation n("P", vec2, TagGrammarFinderSparse::GIVEN_DELIM, vec1);
       string node1_name_sharp = s1 + "#";
       string node2_name = s2;
       try {
         double prob = data.at(n);
         // Bigram prob - node sharp to node.
-        WriteLine(fout, node1_name_sharp, node2_name, EMPTY, s2, prob, "!");
+        if (prob != 0)
+          WriteLine(fout, node1_name_sharp, node2_name, EMPTY, s2, prob, "!");
       } catch (out_of_range &e) {
         cerr << "Out of range error for notation " << n << "; " << e.what() <<
           endl;

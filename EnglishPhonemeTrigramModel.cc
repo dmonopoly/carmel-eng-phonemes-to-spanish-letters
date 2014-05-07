@@ -8,7 +8,7 @@
 #include <string>
 
 #include "EMViterbiPackage/Notation.h"
-#include "TagGrammarFinder.h"
+#include "TagGrammarFinderSparse.h"
 #include "CypherReader.h"
 
 #define PRINT_PROBS true
@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
   map<Notation, double> data;  // Storage for log probabilities and counts.
   vector<string> tag_list;
   cout << "Getting tag grammar..." << endl;
-  bool found = TagGrammarFinder::GetTrigramTagGrammarFromOrganizedRows(
+  bool found = TagGrammarFinderSparse::GetTrigramTagGrammarFromOrganizedRows(
       counts_file, &data, &tag_list);
   if (!found) {
     cerr << "Error getting tag grammar." << endl;
@@ -125,7 +125,7 @@ int main(int argc, char *argv[]) {
       string s2 = tag_list[j];
       vector<string> vec2; vec2.push_back(s2);
       vector<string> vec; vec.push_back(s1);
-      Notation n("P", vec2, TagGrammarFinder::GIVEN_DELIM, vec);
+      Notation n("P", vec2, TagGrammarFinderSparse::GIVEN_DELIM, vec);
       string node1_name = s1;
       string node1_name_sharp = s1 + "#";
       string node2_name = s1 + NODE_NAME_DELIM + s2;
@@ -166,7 +166,7 @@ int main(int argc, char *argv[]) {
         string s3 = tag_list[k];
         vector<string> vec3; vec3.push_back(s3);
         vector<string> vec1and2; vec1and2.push_back(s1); vec1and2.push_back(s2);
-        Notation n("P", vec3, TagGrammarFinder::GIVEN_DELIM, vec1and2);
+        Notation n("P", vec3, TagGrammarFinderSparse::GIVEN_DELIM, vec1and2);
         string node1_name_sharp = s1 + NODE_NAME_DELIM + s2 + "#";
         string node2_name = s2 + NODE_NAME_DELIM + s3;
         try {
