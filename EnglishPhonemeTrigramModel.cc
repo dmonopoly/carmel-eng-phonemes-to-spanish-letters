@@ -15,7 +15,7 @@
 
 using namespace std;
 
-const string WFSA_FILE = "1_eng_phoneme_trigram.wfsa";
+const string WFSA_FILE = "1_eng_phoneme_lm.wfsa";
 const string EMPTY = "*e*";
 const string NODE_NAME_DELIM = "-";
 const double PROB_TO_END = .00001;
@@ -84,7 +84,7 @@ int main(int argc, char *argv[]) {
     fout.close();
   }
 
-  // Begin writing out the WFSA, sparsely connected trigram version.
+  // Begin writing out the WFSA, sparsely connected version.
   cout << "Starting to write WFSA for English phonemes." << endl;
   ofstream fout;
   fout.open(WFSA_FILE.c_str());
@@ -172,7 +172,8 @@ int main(int argc, char *argv[]) {
         try {
           double prob = data.at(n);
           // Trigram prob path, if prob is available.
-          WriteLine(fout, node1_name_sharp, node2_name, EMPTY, s3, prob, "!");
+          if (prob != 0)
+            WriteLine(fout, node1_name_sharp, node2_name, EMPTY, s3, prob, "!");
         } catch (out_of_range &e) {
           // We expect some probabilities to be nonexistent. In these cases,
           // reduce the number of edges.
