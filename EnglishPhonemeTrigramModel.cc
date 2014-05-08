@@ -82,6 +82,7 @@ int main(int argc, char *argv[]) {
       fout << it->first << ": " << it->second << endl;
     }
     fout.close();
+    cout << "Wrote to found_trigram_probs.txt\n";
   }
 
   // Begin writing out the WFSA, sparsely connected version.

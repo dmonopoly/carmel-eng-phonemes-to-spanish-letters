@@ -62,9 +62,11 @@ int main(int argc, char *argv[]) {
       fout << it->first << ": " << it->second << endl;
     }
     fout.close();
+    cout << "Wrote to found_bigram_probs.txt\n";
   }
 
   // Begin writing out the WFSA.
+  cout << "Starting to write WFSA for English phonemes." << endl;
   ofstream fout;
   fout.open(WFSA_FILE.c_str());
   fout << "END" << endl;
