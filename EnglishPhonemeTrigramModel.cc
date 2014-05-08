@@ -90,7 +90,6 @@ int main(int argc, char *argv[]) {
   fout.open(WFSA_FILE.c_str());
   fout << "END" << endl;
   double lambda2 = .9;
-  double prob_to_end = .0001;
   // Unigram probs: START->x
   for (int i = 0; i < tag_list.size(); ++i) {
     string s = tag_list[i];
@@ -106,11 +105,11 @@ int main(int argc, char *argv[]) {
       // x->x#
       WriteLine(fout, node_name, node_name_sharp, EMPTY, EMPTY, lambda2, "!");
       // x#->START
-      WriteLine(fout, node_name_sharp, "START", EMPTY, EMPTY, prob_to_end, "!");
+      WriteLine(fout, node_name_sharp, "START", EMPTY, EMPTY, PROB_TO_END, "!");
       // x->END
-      WriteLine(fout, node_name, "END", EMPTY, EMPTY, prob_to_end, "!");
+      WriteLine(fout, node_name, "END", EMPTY, EMPTY, PROB_TO_END, "!");
       // x#->END
-      WriteLine(fout, node_name_sharp, "END", EMPTY, EMPTY, prob_to_end, "!");
+      WriteLine(fout, node_name_sharp, "END", EMPTY, EMPTY, PROB_TO_END, "!");
     } catch (out_of_range &e) {
       cerr << "Out of range error for notation " << n << "; " << e.what() <<
         endl;
@@ -143,13 +142,13 @@ int main(int argc, char *argv[]) {
         // xy->y
         WriteLine(fout, node1a_name, s2, EMPTY, EMPTY, 1 - lambda1, "!");
         // xy->END
-        WriteLine(fout, node1a_name, "END", EMPTY, EMPTY, prob_to_end, "!");
+        WriteLine(fout, node1a_name, "END", EMPTY, EMPTY, PROB_TO_END, "!");
         // xy#->END
-        WriteLine(fout, node1a_name_sharp, "END", EMPTY, EMPTY, prob_to_end, "!");
+        WriteLine(fout, node1a_name_sharp, "END", EMPTY, EMPTY, PROB_TO_END, "!");
         // xy->START
-        WriteLine(fout, node1a_name, "START", EMPTY, EMPTY, prob_to_end, "!");
+        WriteLine(fout, node1a_name, "START", EMPTY, EMPTY, PROB_TO_END, "!");
         // xy#->START
-        WriteLine(fout, node1a_name_sharp, "START", EMPTY, EMPTY, prob_to_end, "!");
+        WriteLine(fout, node1a_name_sharp, "START", EMPTY, EMPTY, PROB_TO_END, "!");
       } catch (out_of_range &e) {
         cerr << "Out of range error for notation " << n << "; " << e.what() <<
           endl;
